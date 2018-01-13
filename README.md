@@ -12,6 +12,10 @@ In my virtual environments I installed the pytest framework:
 
 '$ pip install -U pytest'
 
+Install selenium:
+
+'$ pip install selenium'
+
 Install the pytest-selenium plugin:
 
 '$ pip install pytest-selenium'
