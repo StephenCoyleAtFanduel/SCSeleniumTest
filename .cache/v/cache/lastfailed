@@ -1,0 +1,8 @@
+{
+  "tests/test_capture_images.py::test_capture_image": true, 
+  "tests/test_capture_images.py::test_review_order": true, 
+  "tests/test_capture_images.py::test_screenshot_on_test_failure": true, 
+  "tests/test_capture_images.py::test_screenshot_on_test_failure[browser_size0]": true, 
+  "tests/test_purchase_2_items.py::test_login": true, 
+  "tests/test_purchase_2_items.py::test_login[browser_size0]": true
+}
