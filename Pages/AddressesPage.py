@@ -24,8 +24,7 @@ class AddressesPage(object):
             except TimeoutException:
                 return TimeoutException
 
-
     @property
     def proceed_to_checkout_button(self):
         # proceed to checkout button
-        return self.browser.find_element_by_xpath('//*[@id="center_column"]/form/p/button')
+        return self.browser.find_element_by_css_selector("button.btn.btn-default.button-medium")
