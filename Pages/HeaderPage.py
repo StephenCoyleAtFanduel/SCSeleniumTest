@@ -45,3 +45,8 @@ class HeaderPage(object):
     def shopping_cart_check_out(self):
         # link to check out within the shopping cart pop up
         return self.browser.find_element_by_css_selector("#button_order_cart span")
+
+    @property
+    def logout(self):
+        # link to check out within the shopping cart pop up
+        return self.browser.find_element_by_css_selector(".logout")

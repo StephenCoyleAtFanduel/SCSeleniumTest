@@ -36,17 +36,3 @@ def browser():
     if driver is None:
         driver = webdriver.Chrome()
     return driver
-
-@pytest.fixture()
-def resource():
-    print("setup")
-    yield "resource"
-    print("teardown")
-
-@classmethod
-def setup_class(cls):
-    "Runs once per class"
-
-@classmethod
-def teardown_class(cls):
-    "Runs at end of class"

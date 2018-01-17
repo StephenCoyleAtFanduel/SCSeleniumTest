@@ -110,7 +110,8 @@ def test_purchase_two_items(browser):
 
     # asserts to confirm values add up correctly
     assert Decimal(tshirt_converted_price) + Decimal(blouse_converted_price) == Decimal(total_products_converted_price)
-    assert Decimal(total_products_converted_price) + Decimal(total_shipping_converted_price) == Decimal(grand_total_converted_price)
+    assert Decimal(total_products_converted_price) + Decimal(total_shipping_converted_price) == \
+        Decimal(grand_total_converted_price)
 
     # click proceed to checkout to go to the addresses page
     scp.proceed_to_checkout_button.click()
@@ -134,4 +135,5 @@ def test_purchase_two_items(browser):
     # click to confirm order
     pp.confirm_order.click()
 
+    hp.logout.click()
     browser.quit()

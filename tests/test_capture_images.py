@@ -2,9 +2,10 @@ from selenium import webdriver
 from Pages.LoginPage import LoginPage
 from Pages.MyAccountPage import MyAccountPage
 from Pages.OrderHistoryPage import OrderHistoryPage
+from Pages.HeaderPage import HeaderPage
 
 
-def test_capture_image(browser, resource):
+def test_capture_image(browser):
     """
     insert an assert which will fail and capture a screen-grab when it does
     NOTE - to generate report please add --html=report.html at the end of test name,
@@ -49,4 +50,6 @@ def test_capture_image(browser, resource):
     # confirm that comment is now logged in message history
     assert ohp.message_history.text == comment
 
+    hp = HeaderPage(browser)
+    hp.logout.click()
     browser.quit()

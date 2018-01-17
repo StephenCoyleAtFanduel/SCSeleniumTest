@@ -2,6 +2,7 @@ from selenium import webdriver
 from Pages.LoginPage import LoginPage
 from Pages.MyAccountPage import MyAccountPage
 from Pages.OrderHistoryPage import OrderHistoryPage
+from Pages.HeaderPage import HeaderPage
 
 
 def test_review_order(browser):
@@ -41,4 +42,6 @@ def test_review_order(browser):
     # confirm that comment is now logged in message history
     assert ohp.message_history.text == comment
 
+    hp = HeaderPage(browser)
+    hp.logout.click()
     browser.quit()
